@@ -55,9 +55,11 @@ android:theme="@style/fanyou_DialogParent" >
 <!-- changeuser SDK end -->
 ```
 3.添加libs目录下文件到你的工程中
+
 ![](http://i.imgur.com/xEfVSmH.png)
 
 4.添加资源文件夹res直接拷贝覆盖到你工程中的res文件夹
+
 ![](http://i.imgur.com/WNS4qg5.png)
 
 ## SDK代码接入部分
