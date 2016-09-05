@@ -7,14 +7,14 @@
 ![](http://i.imgur.com/IkpMILJ.png)
 
 ## SDK资源文件接入步骤
-1、在AndroidManifest.xml 中添加以下权限
+1.在AndroidManifest.xml 中添加以下权限
 ```code
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
 ```
 
-2、在AndroidManifest.xml中添加以下activity
+2.在AndroidManifest.xml中添加以下activity
 ```code
 <!-- alipay sdk begin -->
 <activity
@@ -54,12 +54,12 @@ android:theme="@style/fanyou_DialogParent" >
 </activity>
 <!-- changeuser SDK end -->
 ```
-3、添加libs目录下文件到你的工程中
+3.添加libs目录下文件到你的工程中
 ![](http://i.imgur.com/xEfVSmH.png)
-4、添加资源文件夹res直接拷贝覆盖到你工程中的res文件夹
+4.添加资源文件夹res直接拷贝覆盖到你工程中的res文件夹
 ![](http://i.imgur.com/WNS4qg5.png)
 ## SDK代码接入部分
-**1、初始化接口**
+**1.初始化接口**
 在程序初始化（onCreate）时调用
 **OwnerSdkHelper.init(activity, appid, appkey, channel, baseUrl, finishListener, initListener);**
 ### 示例
@@ -98,7 +98,7 @@ OwnerSdkHelper.init(
 ```
 
 
-**2、void record接口**
+**2.void record接口**
 需在进入游戏时调用，确保可以保存和获取到相应的数据
 （如同一账号下有多个角色，请将角色ID传入username）
 **OwnerSdkHelper.record(openId, userType, serverId, userName, userId, level, loginType, Custom);**
@@ -116,20 +116,20 @@ String Custom); //自定义参数（可传""）
 
 ----------
 
-**3、boolean isShowChangeUser接口**
+**3.boolean isShowChangeUser接口**
 提供给游戏判断是否开启切换用户功能
 **OwnerSdkHelper.isShowChangeUser();**
 
 
 ----------
 
-**4、void showChangeUser接口**
+**4.void showChangeUser接口**
 当判断双账号为开启时调用showChangeUser,否则调用游戏正常调用对应SDK逻辑
 **OwnerSdkHelper.showChangeUser();**
 
 ----------
 
-**5、void pay接口**
+**5.void pay接口**
 支付接口
 **OwnerSdkHelper.pay(serverId, roleName, amount, callBackInfo);**
 示例
